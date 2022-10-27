@@ -39,7 +39,7 @@ export default function AppNavbar() {
           Servicios
         </Navbar.Link>
         <Navbar.Link href="#">Contáctanos</Navbar.Link>
-        <Navbar.Link href="#">Company</Navbar.Link>
+        <Navbar.Link href="#">Equipo</Navbar.Link>
       </Navbar.Content>
       <Navbar.Toggle aria-label="toggle navigation" showIn="sm" />
 

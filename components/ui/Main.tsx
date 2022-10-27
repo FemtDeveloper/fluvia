@@ -12,7 +12,7 @@ const Main = () => {
   return (
     <Grid.Container
       css={{ padding: "30px", margin: 0 }}
-      justify="center"
+      justify="space-around"
       alignItems="center"
       gap={1}
       // direction="column"
@@ -28,7 +28,7 @@ const Main = () => {
           Fluvia
         </Text>
       </Grid>
-      <Grid xs={12} sm={6} css={{ marginBottom: 30 }}>
+      <Grid xs={12} sm={5} css={{ marginBottom: 30 }}>
         <Card css={{ padding: 15 }} variant="bordered">
           <Text size={"$md"} weight={"semibold"}>
             Fluvia es desarrollo tecnológico para proteger los recursos hídricos
@@ -38,7 +38,7 @@ const Main = () => {
           </Text>
         </Card>
       </Grid>
-      <Grid xs={12} sm={6} data-aos="fade-up" css={{ marginBottom: 30 }}>
+      <Grid xs={12} sm={5} data-aos="fade-up" css={{ marginBottom: 30 }}>
         <Image
           src="/green-river.jpg"
           alt="green-river"
@@ -47,7 +47,16 @@ const Main = () => {
           style={{ borderRadius: 5 }}
         />
       </Grid>
-      <Grid xs={12} sm={6} css={{ marginBottom: 30 }}>
+      <Grid xs={12} sm={5} data-aos="fade-up" css={{ marginBottom: 30 }}>
+        <Image
+          src="/rio.jpg"
+          alt="green-river"
+          width={800}
+          height={300}
+          style={{ borderRadius: 5 }}
+        />
+      </Grid>{" "}
+      <Grid xs={12} sm={5} css={{ marginBottom: 30 }}>
         <Card css={{ padding: 15 }} variant="bordered">
           <Text size={"$md"} weight={"semibold"}>
             Utilizamos en la técnica de trazadores, estas son tintas especiales
@@ -56,15 +65,6 @@ const Main = () => {
             río la mezcla con los sensores denuestro equipo.
           </Text>
         </Card>
-      </Grid>
-      <Grid xs={12} sm={6} data-aos="fade-up" css={{ marginBottom: 30 }}>
-        <Image
-          src="/rio.jpg"
-          alt="green-river"
-          width={800}
-          height={300}
-          style={{ borderRadius: 5 }}
-        />
       </Grid>
     </Grid.Container>
   );
