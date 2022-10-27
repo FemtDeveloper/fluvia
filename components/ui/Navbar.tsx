@@ -1,44 +1,63 @@
 import React, { useState } from "react";
-import { Navbar, Button, Link, Text } from "@nextui-org/react";
+import { Navbar, Button, Link, Text, Image } from "@nextui-org/react";
 
 type VariantType = "static" | "floating" | "sticky";
 
 export default function AppNavbar() {
-  const [variant, setVariant] = useState<VariantType>("static");
-  const validVariants = ["static", "floating", "sticky"];
-
-  const updateVariant = (variante: VariantType) => {
-    setVariant(variante);
-  };
+  const collapseItems = [
+    "Nosotros",
+    "Servicios",
+    "Cotizaciones",
+    "Nuestro equipo",
+    "Contacto",
+  ];
 
   return (
-    <>
-      <Navbar isBordered variant={variant}>
-        <Navbar.Brand>
-          <Text b color="inherit" hideIn="xs">
-            ACME
-          </Text>
-        </Navbar.Brand>
-        <Navbar.Content hideIn="xs">
-          <Navbar.Link href="#">Features</Navbar.Link>
-          <Navbar.Link isActive href="#">
-            Customers
-          </Navbar.Link>
-          <Navbar.Link href="#">Pricing</Navbar.Link>
-          <Navbar.Link href="#">Company</Navbar.Link>
-        </Navbar.Content>
+    <Navbar isBordered variant="sticky">
+      <Navbar.Brand>
         <Navbar.Content>
-          <Navbar.Link color="inherit" href="#">
-            Login
+          <Navbar.Link href="/">
+            <Image
+              src="/logo-fluvia-circulos.png"
+              alt="fluvia-logo"
+              width={100}
+            />
+            <Text
+              h2
+              css={{
+                textGradient: "45deg, #890d09 0%, #021281 80%",
+              }}
+            >
+              Fluvia
+            </Text>
           </Navbar.Link>
-          <Navbar.Item>
-            <Button auto flat as={Link} href="#">
-              Sign Up
-            </Button>
-          </Navbar.Item>
         </Navbar.Content>
-        {/* <SwitchTheme /> */}
-      </Navbar>
-    </>
+      </Navbar.Brand>
+      <Navbar.Content enableCursorHighlight hideIn="xs" variant="underline">
+        <Navbar.Link href="#">Nosotros</Navbar.Link>
+        <Navbar.Link isActive href="#">
+          Servicios
+        </Navbar.Link>
+        <Navbar.Link href="#">Contáctanos</Navbar.Link>
+        <Navbar.Link href="#">Company</Navbar.Link>
+      </Navbar.Content>
+      <Navbar.Toggle aria-label="toggle navigation" showIn="sm" />
+
+      <Navbar.Collapse>
+        {collapseItems.map((item, index) => (
+          <Navbar.CollapseItem key={item}>
+            <Link
+              color="inherit"
+              css={{
+                minWidth: "100%",
+              }}
+              href="#"
+            >
+              {item}
+            </Link>
+          </Navbar.CollapseItem>
+        ))}
+      </Navbar.Collapse>
+    </Navbar>
   );
 }
