@@ -16,7 +16,7 @@ const Main = () => {
     <>
       <Grid2
         xs={12}
-        sx={{ marginBottom: 1 }}
+        sx={{ marginBottom: 5 }}
         display="flex"
         justifyContent="center"
       >

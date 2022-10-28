@@ -8,17 +8,43 @@ import "@splidejs/react-splide/css/skyblue";
 
 const Slider = () => {
   return (
-    <Slide autoplay duration={2500}>
-      <div className="each-slide-effect">
-        <Image src="/rio3.jpg" alt="Image 1" width={1200} height={300} />
-      </div>
-      <div className="each-slide-effect">
-        <Image src="/rio2.jpg" alt="Image 2" width={1200} height={300} />
-      </div>
-      <div className="each-slide-effect">
-        <Image src="/rio4.jpg" alt="Image 2" width={1200} height={300} />
-      </div>
-    </Slide>
+    <div style={{ marginTop: "63px" }}>
+      <Slide autoplay duration={2500}>
+        <div
+          className="each-slide-effect"
+          style={{
+            position: "relative",
+            width: "100%",
+            height: "350px",
+            margin: "0 auto",
+          }}
+        >
+          <Image src="/rio3.jpg" alt="Image 1" fill />
+        </div>
+        <div
+          className="each-slide-effect"
+          style={{
+            position: "relative",
+            width: "100%",
+            height: "350px",
+            margin: "0 auto",
+          }}
+        >
+          <Image src="/rio2.jpg" alt="Image 2" fill />
+        </div>
+        <div
+          className="each-slide-effect"
+          style={{
+            position: "relative",
+            width: "100%",
+            height: "350px",
+            margin: "0 auto",
+          }}
+        >
+          <Image src="/rio4.jpg" alt="Image 2" fill />
+        </div>
+      </Slide>
+    </div>
   );
 };
 
