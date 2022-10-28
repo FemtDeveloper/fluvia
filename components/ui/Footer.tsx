@@ -1,23 +1,15 @@
 import { Box } from "@mui/material";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
-import RestoreIcon from "@mui/icons-material/Restore";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
+
 import BottomNavigation from "@mui/material/BottomNavigation";
 import Link from "next/link";
-import { Instagram, YouTube, Facebook, WhatsApp } from "@mui/icons-material";
+import { Instagram, YouTube, WhatsApp } from "@mui/icons-material";
 
 const Footer = () => {
   return (
     <>
       <Box sx={{ backgroundColor: "purple" }}>
-        <BottomNavigation
-        //   showLabels
-        //   value={value}
-        //   onChange={(event, newValue) => {
-        //     setValue(newValue);
-        //   }}
-        >
+        <BottomNavigation>
           <Link
             href={"https://www.instagram.com/frontend_trend/"}
             target="_blank"
