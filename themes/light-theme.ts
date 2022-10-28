@@ -1,12 +1,13 @@
-import { createTheme } from "@nextui-org/react";
+import { createTheme } from "@mui/material";
+import { green, purple } from "@mui/material/colors";
 
 export const lightTheme = createTheme({
-  type: "light",
-  theme: {
-    colors: {
-      // primaryBorder: "$green500",
-      text: "#003f89",
-      link: "blue",
-    }, // optional
+  palette: {
+    primary: {
+      main: "#ccc",
+    },
+    secondary: {
+      main: green[500],
+    },
   },
 });
