@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import Head from "next/head";
 import AppNavbar from "../ui/Navbar";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
+import Footer from "../ui/Footer";
 
 interface LayoutProps {
   title: string;
@@ -22,9 +23,12 @@ const Layout: FC<LayoutProps> = ({ children, title, pageDescription }) => {
         <meta name="og:description" content={pageDescription} />
       </Head>
       <AppNavbar />
-      <main>
+      <main style={{ marginTop: "75px", minHeight: "70vh" }}>
         <Grid2 xs={12}>{children}</Grid2>
       </main>
+      <footer style={{ position: "relative", bottom: 0 }}>
+        <Footer />
+      </footer>
     </>
   );
 };

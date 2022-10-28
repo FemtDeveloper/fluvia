@@ -13,7 +13,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Image from "next/image";
-import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
+import Link from "next/link";
 
 interface Props {
   /**
@@ -24,7 +24,7 @@ interface Props {
 }
 
 const drawerWidth = 240;
-const navItems = ["Home", "About", "Contact"];
+const navItems = ["Nosotros", "Servicios", "Experiencia", "Contáctanos"];
 
 export default function DrawerAppBar(props: Props) {
   const { window } = props;
@@ -35,17 +35,56 @@ export default function DrawerAppBar(props: Props) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
+    <Box
+      onClick={handleDrawerToggle}
+      sx={{
+        textAlign: "center",
+        backgroundColor: "#ebebeb08",
+        height: "100vh",
+      }}
+    >
+      <Typography
+        variant="h3"
+        sx={{
+          my: 2,
+          backgroundImage:
+            "-webkit-linear-gradient(45deg, #ac0e11 0%, #1856e3 90%)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          fontWeight: 600,
+        }}
+      >
+        Fluvia
       </Typography>
       <Divider />
       <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
-            </ListItemButton>
+            <Link
+              key={item}
+              href={`/${item.toLowerCase()}`}
+              passHref
+              style={{ textDecoration: "none" }}
+            >
+              <ListItemButton
+                sx={{
+                  backgroundImage:
+                    "-webkit-linear-gradient(45deg, #ac0e11 0%, #1856e3 90%)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  fontWeight: 700,
+                }}
+              >
+                <ListItemText
+                  primary={item}
+                  primaryTypographyProps={{ fontWeight: 700, fontSize: 20 }}
+                />
+              </ListItemButton>
+            </Link>
+            {/* <Link> */}
+            {/* < sx={{ textAlign: "center" }}>
+              </> */}
+            {/* </Link> */}
           </ListItem>
         ))}
       </List>
@@ -59,28 +98,30 @@ export default function DrawerAppBar(props: Props) {
     <>
       <AppBar component="nav" sx={{ backgroundColor: "#ebebebb8" }}>
         <Toolbar sx={{ justifyContent: "space-between", alignItems: "center" }}>
-          <Box display={"flex"} alignItems="center">
-            <Image
-              src="/logo-fluvia-circulos.png"
-              alt="fluvia-logo"
-              width={60}
-              height={60}
-            />
-            <Typography
-              variant="h4"
-              fontWeight={500}
-              // ml={1}
-              style={{
-                // fontSize: 30,
-                backgroundImage:
-                  "-webkit-linear-gradient(45deg, #ac0e11 0%, #1856e3 90%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              }}
-            >
-              Fluvia
-            </Typography>
-          </Box>
+          <Link href={"/"} passHref style={{ textDecoration: "none" }}>
+            <Box display={"flex"} alignItems="center">
+              <Image
+                src="/logo-fluvia-circulos.png"
+                alt="fluvia-logo"
+                width={60}
+                height={60}
+              />
+              <Typography
+                variant="h4"
+                fontWeight={500}
+                // ml={1}
+                style={{
+                  // fontSize: 30,
+                  backgroundImage:
+                    "-webkit-linear-gradient(45deg, #ac0e11 0%, #1856e3 90%)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
+              >
+                Fluvia
+              </Typography>
+            </Box>
+          </Link>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -92,9 +133,23 @@ export default function DrawerAppBar(props: Props) {
           </IconButton>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: "#fff" }}>
-                {item}
-              </Button>
+              <Link
+                key={item}
+                href={`/${item.toLowerCase()}`}
+                passHref
+                style={{ textDecoration: "none" }}
+              >
+                <Button
+                  sx={{
+                    backgroundImage:
+                      "-webkit-linear-gradient(45deg, #ac0e11 0%, #1856e3 90%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
+                  {item}
+                </Button>
+              </Link>
             ))}
           </Box>
         </Toolbar>

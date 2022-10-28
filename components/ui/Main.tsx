@@ -24,7 +24,7 @@ const Main = () => {
           variant="h1"
           fontWeight={500}
           // ml={1}
-          style={{
+          sx={{
             // fontSize: 30,
             backgroundImage:
               "-webkit-linear-gradient(45deg, #ac0e11 0%, #1856e3 90%)",
@@ -35,9 +35,9 @@ const Main = () => {
           Fluvia
         </Typography>
       </Grid2>
-      <Grid2 container>
+      <Grid2 container justifyContent={"center"} alignItems={"center"}>
         <Grid2 xs={12} sm={6} sx={{ marginBottom: 5 }}>
-          <Card sx={{ padding: 5, margin: 5 }}>
+          <Card sx={{ padding: 5, margin: 0 }}>
             <Typography variant="subtitle1" sx={{ fontSize: 20 }}>
               Fluvia es desarrollo tecnológico para proteger los recursos
               hídricos alineado con los objetivos de desarrollo sostenible que
@@ -65,7 +65,7 @@ const Main = () => {
         </Grid2>
       </Grid2>
       <Grid2 xs={12} sm={6} sx={{ marginBottom: 5, display: { sm: "none" } }}>
-        <Card sx={{ padding: 5, margin: 5 }}>
+        <Card sx={{ padding: 5, margin: 0 }}>
           <Typography variant="subtitle1" sx={{ fontSize: 20 }}>
             Utilizamos en la técnica de trazadores, estas son tintas especiales
             cuyo composición química se hace para que no tenga prácticamente
@@ -99,7 +99,7 @@ const Main = () => {
           display: { xs: "none", sm: "flex" },
         }}
       >
-        <Card sx={{ padding: 5, margin: 5 }}>
+        <Card sx={{ padding: 5, margin: 0 }}>
           <Typography variant="subtitle1" sx={{ fontSize: 20 }}>
             Utilizamos en la técnica de trazadores, estas son tintas especiales
             cuyo composición química se hace para que no tenga prácticamente
