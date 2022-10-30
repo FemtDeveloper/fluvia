@@ -8,7 +8,7 @@ import "@splidejs/react-splide/css/skyblue";
 
 const Slider = () => {
   return (
-    <div style={{ marginTop: "63px" }}>
+    <div>
       <Slide autoplay duration={2500}>
         <div
           className="each-slide-effect"

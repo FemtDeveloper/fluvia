@@ -7,7 +7,7 @@ import Slide from "../components/ui/Slide";
 const HomePage: NextPage = () => {
   return (
     <>
-      <Layout title="main" pageDescription="esta es la home">
+      <Layout title="Fluvia - Home" pageDescription="esta es la home">
         <Slide />
         <Main />
       </Layout>

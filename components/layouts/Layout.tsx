@@ -23,7 +23,14 @@ const Layout: FC<LayoutProps> = ({ children, title, pageDescription }) => {
         <meta name="og:description" content={pageDescription} />
       </Head>
       <AppNavbar />
-      <main style={{ marginTop: "75px", minHeight: "70vh" }}>
+      <main
+        style={{
+          marginTop: "65px",
+          minHeight: "70vh",
+          cursor: 'url("/public/gota.png"), auto',
+        }}
+        className="main-container"
+      >
         <Grid2 xs={12}>{children}</Grid2>
       </main>
       <footer style={{ position: "relative", bottom: 0 }}>

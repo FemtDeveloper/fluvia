@@ -39,8 +39,13 @@ export default function DrawerAppBar(props: Props) {
       onClick={handleDrawerToggle}
       sx={{
         textAlign: "center",
-        backgroundColor: "#ebebeb08",
-        height: "100vh",
+        // backgroundColor: "#ebebeb08",
+        height: "90vh",
+        backgroundColor: "rgba( 97, 98, 221, 0.1 )",
+        boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.17 )",
+        backdropFilter: "blur( 11.5px )",
+        borderRadius: "10px",
+        border: "1px solid rgba( 255, 255, 255, 0.18 )",
       }}
     >
       <Typography
@@ -81,10 +86,6 @@ export default function DrawerAppBar(props: Props) {
                 />
               </ListItemButton>
             </Link>
-            {/* <Link> */}
-            {/* < sx={{ textAlign: "center" }}>
-              </> */}
-            {/* </Link> */}
           </ListItem>
         ))}
       </List>
@@ -96,7 +97,18 @@ export default function DrawerAppBar(props: Props) {
 
   return (
     <>
-      <AppBar component="nav" sx={{ backgroundColor: "#ebebebb8" }}>
+      <AppBar
+        component="nav"
+        sx={{
+          // backgroundColor: "#ebebebb8",
+          // height: "100vh",
+          backgroundColor: "rgba( 97, 98, 221, 0.1 )",
+          boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
+          backdropFilter: "blur( 11.5px )",
+          borderRadius: "5px",
+          border: "1px solid rgba( 255, 255, 255, 0.18 )",
+        }}
+      >
         <Toolbar sx={{ justifyContent: "space-between", alignItems: "center" }}>
           <Link href={"/"} passHref style={{ textDecoration: "none" }}>
             <Box display={"flex"} alignItems="center">
@@ -127,9 +139,11 @@ export default function DrawerAppBar(props: Props) {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
+            sx={{ display: { sm: "none" } }}
           >
-            <MenuIcon />
+            <MenuIcon
+              sx={{ color: "blue", fontSize: "30px", fontWeight: 600 }}
+            />
           </IconButton>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
