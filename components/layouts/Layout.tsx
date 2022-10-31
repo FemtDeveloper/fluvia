@@ -26,7 +26,7 @@ const Layout: FC<LayoutProps> = ({ children, title, pageDescription }) => {
       <main
         style={{
           marginTop: "65px",
-          minHeight: "70vh",
+          minHeight: "80vh",
           cursor: 'url("/public/gota.png"), auto',
         }}
         className="main-container"

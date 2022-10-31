@@ -16,7 +16,7 @@ const Main = () => {
     <>
       <Grid2
         xs={12}
-        sx={{ marginBottom: 3 }}
+        // sx={{ marginBottom: 3 }}
         display="flex"
         justifyContent="center"
       >
@@ -35,7 +35,7 @@ const Main = () => {
       </Grid2>
       <Grid2 container justifyContent={"center"} alignItems={"flex-start"}>
         <Grid2 xs={12} sm={6}>
-          <Card sx={{ padding: 2, margin: 5 }}>
+          <Card sx={{ padding: 2, margin: 3 }}>
             <Typography variant="subtitle1" sx={{ fontSize: 20 }}>
               Fluvia es desarrollo tecnológico para proteger los recursos
               hídricos alineado con los objetivos de desarrollo sostenible que

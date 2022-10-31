@@ -11,20 +11,22 @@ const Nosotros: NextPage = () => {
       title="Nosotros-Fluvia"
     >
       <Box
-        sx={{ margin: 5 }}
+        // sx={{ margin: 5 }}
         component={"section"}
         display="flex"
         flexDirection={"column"}
         alignItems="center"
         justifyContent={"center"}
-        gap={2}
+        gap={4}
+        // marginX={12}
+        sx={{ marginX: { xs: 5, sm: 12 } }}
+        marginY={8}
+        paddingTop={4}
       >
         <Typography
           variant="h1"
           fontWeight={500}
-          // ml={1}
           sx={{
-            // fontSize: 30,
             backgroundImage:
               "-webkit-linear-gradient(45deg, #ac0e11 0%, #1856e3 90%)",
             WebkitBackgroundClip: "text",
